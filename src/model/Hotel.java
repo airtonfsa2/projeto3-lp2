@@ -15,7 +15,8 @@ public class Hotel extends PontoTuristico {
     public boolean ar;
     public boolean cafeDaManha;
 
-    public Hotel(int estrelas, boolean ar, boolean cafeDaManha) {
+    public Hotel(int estrelas, boolean ar, boolean cafeDaManha, String nome, int ordem, String bairro) {
+        super(nome, ordem, bairro);
         this.estrelas = estrelas;
         this.ar = ar;
         this.cafeDaManha = cafeDaManha;

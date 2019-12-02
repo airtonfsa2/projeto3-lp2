@@ -13,4 +13,11 @@ public abstract class PontoTuristico {
     public String nome;
     public int ordem;
     public String bairro;
+
+    public PontoTuristico(String nome, int ordem, String bairro) {
+        this.nome = nome;
+        this.ordem = ordem;
+        this.bairro = bairro;
+    }
+    
 }

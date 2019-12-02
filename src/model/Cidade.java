@@ -5,9 +5,6 @@
  */
 package model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * @author airto
@@ -18,7 +15,6 @@ public class Cidade {
     public String estado;
     public String pais;
     
-    List <PontoTuristico> ponto = new ArrayList<>();
 
     public Cidade(String nome, Coordenadas localizacao, String estado, String pais) {
         this.nome = nome;

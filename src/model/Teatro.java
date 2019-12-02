@@ -13,7 +13,8 @@ public class Teatro extends PontoTuristico {
     public boolean internacional;
     public boolean publico;
 
-    public Teatro(boolean internacional, boolean publico) {
+    public Teatro(String nome, int ordem, String bairro, boolean internacional, boolean publico) {
+        super(nome, ordem, bairro);
         this.internacional = internacional;
         this.publico = publico;
     }

@@ -7,19 +7,17 @@ package model;
 
 /**
  *
- * @author airto
+ * @author Aluno
  */
-public class Usuario {
+public abstract class Usuario {
     public String emailLogin;
     public String hashSenha;
-    public enum sexo{m, f};
-    public String nomeCompleto;
-
-    public Usuario(String emailLogin, String hashSenha, String nomeCompleto) {
-        this.emailLogin = emailLogin;
-        this.hashSenha = hashSenha;
-        this.nomeCompleto = nomeCompleto;
-    }
     
+    public boolean autentica(String login, String senha){
+        if(login.equals(emailLogin)&& senha.equals(hashSenha))
+            return true;
+    
+        return false;
+    }
     
 }
