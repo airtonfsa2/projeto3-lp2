@@ -10,5 +10,15 @@ package model;
  * @author Aluno
  */
 public class Moderador extends Usuario {
+    private String nome;
     
+    Cidade c1;
+    
+    public void cadastrarCidade(String nome){
+        
+    }
+    
+    public void listarCidades(){
+    
+    }
 }
