@@ -11,17 +11,19 @@ package model;
  */
 public class Cidade {
     public String nome;
-    public Coordenadas localizacao;
+    //public Coordenadas localizacao;
     public String estado;
     public String pais;
-    
 
-    public Cidade(String nome, Coordenadas localizacao, String estado, String pais) {
+    public Cidade(String nome, String estado, String pais) {
         this.nome = nome;
-        this.localizacao = localizacao;
         this.estado = estado;
         this.pais = pais;
     }
     
+    
+    
+
+
     
 }

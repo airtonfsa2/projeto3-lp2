@@ -5,6 +5,8 @@
  */
 package projeto3;
 
+import model.Cidade;
+
 /**
  *
  * @author airto

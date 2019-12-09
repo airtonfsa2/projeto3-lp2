@@ -18,8 +18,8 @@ import model.Usuario;
  */
 public class Controlador {
     
-    List<PontoTuristico> pontos = new ArrayList<>();
-    List<Usuario> usuarios = new ArrayList<>();
-    List<Cidade> cidades = new ArrayList<>();
-    List<Moderador> moderadores = new ArrayList<>();
+    List<PontoTuristico> listaPontos = new ArrayList<>();
+    List<Usuario> listaUsuarios = new ArrayList<>();
+    //List<Cidade> listaCidades = new ArrayList<>();
+    List<Moderador> listaModeradores = new ArrayList<>();
 }
