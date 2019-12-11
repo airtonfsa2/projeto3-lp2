@@ -5,6 +5,8 @@
  */
 package model;
 
+import java.util.Calendar;
+
 /**
  *
  * @author airto
@@ -12,13 +14,13 @@ package model;
 public class Avaliacao {
     public String titulo;
     public String descricao;
-    //public Data data;
+    public Calendar data;
     public int pontuacao;
 
-    public Avaliacao(String titulo, String descricao, Data data, int pontuacao) {
+    public Avaliacao(String titulo, String descricao, Calendar data, int pontuacao) {
         this.titulo = titulo;
         this.descricao = descricao;
-        //this.data = data;
+        this.data = data;
         this.pontuacao = pontuacao;
     }
     

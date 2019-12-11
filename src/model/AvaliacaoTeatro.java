@@ -5,6 +5,8 @@
  */
 package model;
 
+import java.util.Calendar;
+
 /**
  *
  * @author airto
@@ -21,7 +23,7 @@ public class AvaliacaoTeatro extends Avaliacao {
     }
     */
 
-    public AvaliacaoTeatro(String titulo, String descricao, Data data, int pontuacao) {
+    public AvaliacaoTeatro(String titulo, String descricao, Calendar data, int pontuacao) {
         super(titulo, descricao, data, pontuacao);
     }
     

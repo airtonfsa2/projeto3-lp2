@@ -5,6 +5,8 @@
  */
 package model;
 
+import java.util.Calendar;
+
 /**
  *
  * @author airto
@@ -14,7 +16,7 @@ public class AvaliacaoHotel extends Avaliacao {
     public int atendimento;
     public int conforto;
 
-    public AvaliacaoHotel(String titulo, String descricao, Data data, int pontuacao) {
+    public AvaliacaoHotel(String titulo, String descricao, Calendar data, int pontuacao) {
         super(titulo, descricao, data, pontuacao);
     }
     public enum motivo{viagem, trabalho, passeio, luaDeMel};
