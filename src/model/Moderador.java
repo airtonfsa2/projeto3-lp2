@@ -16,9 +16,9 @@ import controller.Controlador;
 public class Moderador extends Usuario {
     private String nome;
     
-    List<Cidade> listaCidades = new ArrayList<>();
+    //List<Cidade> listaCidades = new ArrayList<>();
     
-    public void cadastrarCidade(String nome){
+    /*public void cadastrarCidade(String nome){
         
         Scanner s1 = new Scanner(System.in);
         
@@ -46,5 +46,5 @@ public class Moderador extends Usuario {
     
     public void listarCidades(){
     
-    }
+    }*/
 }
