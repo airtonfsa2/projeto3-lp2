@@ -11,16 +11,17 @@ import java.util.Objects;
  *
  * @author airto
  */
-public class Cidade {
+public class Cidade implements Comparable<Cidade> {
     public String nome;
-    //public Coordenadas localizacao;
+    public String cep;
     public String estado;
     public String pais;
 
-    public Cidade(String nome, String estado, String pais) {
+    public Cidade(String nome, String estado, String pais, String cep) {
         this.nome = nome;
         this.estado = estado;
         this.pais = pais;
+        this.cep = cep;
     }
 
   
@@ -60,6 +61,10 @@ public class Cidade {
     public String getPais() {
         return pais;
     }
+    
+    public String getCep(){
+        return cep;
+    }
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -73,7 +78,19 @@ public class Cidade {
         this.pais = pais;
     }
     
+    public void setCep(String cep){
+        this.cep = cep;
+    }
+
+    @Override
+    public int compareTo(Cidade o) {
+        return this.getNome().compareTo(o.getNome());
+    }
     
+    @Override
+    public String toString(){
+        return "Nome da cidade: " +nome + ", estado: " + estado + "pais: " + pais;
+    }
     
 
 

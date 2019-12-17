@@ -6,6 +6,7 @@
 package controller;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import model.Cidade;
@@ -29,10 +30,10 @@ public class Controlador {
     Cidade cidade;
     Moderador moderador;
     
-    public boolean cadastrarCidade(String nome, String estado, String pais){
+    public boolean cadastrarCidade(String nome, String estado, String pais, String cep){
         Iterator it = listaCidades.iterator();
         
-        cidade = new Cidade (nome, estado, pais);
+        cidade = new Cidade (nome, estado, pais, cep);
         
         while(it.hasNext()){
             boolean aux = it.hasNext();
@@ -49,4 +50,9 @@ public class Controlador {
 
         return listaCidades.iterator();
 }
+    public void ordenarCidades(){
+        
+        Collections.sort(listaCidades);
+    }
+    
 }
