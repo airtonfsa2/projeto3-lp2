@@ -9,18 +9,34 @@ import java.util.Calendar;
 
 /**
  *
- * @author airto
+ * @author Usuário
  */
-public class AvaliacaoHotel extends Avaliacao {
+public class AvaliacaoHotel extends Avaliacao{
+    
     public int custoBeneficio;
-    public int atendimento;
     public int conforto;
+    public int atendimento;
+    public int motivo;
 
-    public AvaliacaoHotel(String titulo, String descricao, Calendar data, int pontuacao) {
-        super(titulo, descricao, data, pontuacao);
+    public AvaliacaoHotel(int custoEstendido, int conforto, int atendimento, String titulo, String descricao, Calendar data, int motivo) {
+        super(titulo, descricao, data);
+        this.custoBeneficio = custoEstendido;
+        this.conforto = conforto;
+        this.atendimento = atendimento;
+        this.motivo = motivo;
     }
-    public enum motivo{viagem, trabalho, passeio, luaDeMel};
+    
+    /*
+        Uso da interface 'Comparable' para facilitar na hora da ordenação
+    */
+    @Override
+    public int compareTo(Avaliacao o) {
+        return this.data.compareTo(o.data);
+    }
+    
+    @Override
+    public float getPontuacao(){
+        return((conforto+atendimento+custoBeneficio) / 3);
+    }
 
-    
-    
 }

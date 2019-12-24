@@ -5,23 +5,27 @@
  */
 package model;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 
 /**
  *
- * @author airto
+ * @author Usuário
  */
-public class Avaliacao {
+public abstract class Avaliacao implements Comparable<Avaliacao>{
     public String titulo;
     public String descricao;
     public Calendar data;
-    public int pontuacao;
+    public float pontuacao;
+    public boolean jaAvaliado = false;
 
-    public Avaliacao(String titulo, String descricao, Calendar data, int pontuacao) {
+    public Avaliacao(String titulo, String descricao, Calendar data) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.data = data;
-        this.pontuacao = pontuacao;
     }
+    
+    public abstract float getPontuacao();
     
 }
