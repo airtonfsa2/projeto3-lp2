@@ -22,6 +22,12 @@ import model.*;
  *
  * @author Usuário
  */
+
+/*
+Classe controladora criada para controlar todo o fluxo do programa, com métodos.
+listas, atributos, etc.. Essa classe que faz o intermédio de informações entre
+os modelos do projeto, seja ele a parte de visualização ou não
+*/
 public class Controller {
     
     public static ArrayList<Usuario> listaUsuarios = new ArrayList<>();
@@ -30,7 +36,7 @@ public class Controller {
     public static ArrayList<PontoTuristico> pontosOrdenados = new ArrayList<>();
     
     /*
-        Recebe os dados da view, e cadastra um usuario na lista
+        Recebe os dados da view, caso haja, e cadastra um usuario na lista
     */
     public static boolean CadastrarUsuario(String emailLogin, String hashSenha, int sexo, String nomeCompleto) throws NoSuchAlgorithmException{
         Usuario user = new UsuarioComum(emailLogin, hashSenha, sexo, nomeCompleto);
@@ -45,7 +51,7 @@ public class Controller {
     }
     
     /*
-        Recebe os dados da view, e retorna o usuario correspondente para a view
+        Recebe os dados da view, caso haja, e retorna o usuario correspondente para a view
     */
     public static Usuario Login(String emailLogin, String senha) throws NoSuchAlgorithmException{
         
@@ -58,7 +64,7 @@ public class Controller {
     }
     
     /*
-        Recebe os dados da view, e cadastra o ponto turistico na lista de pontos turisticos e na lista de pontos ordenados por pontuacao
+        Recebe os dados da view, caso haja, e cadastra o ponto turistico na lista de pontos turisticos e na lista de pontos ordenados por pontuacao
     */
     public static boolean CadastrarTeatro(String nome, int ordem, String localizacao, String bairro, Cidade cidade, boolean internacional, boolean publico){
         PontoTuristico ponto = new Teatro(nome, ordem, localizacao, bairro, cidade, internacional, publico);
@@ -75,7 +81,7 @@ public class Controller {
     }
     
     /*
-        Recebe os dados da view, e cadastra o ponto turistico na lista de pontos turisticos e na lista de pontos ordenados por pontuacao
+        Recebe os dados da view, caso haja, e cadastra o ponto turistico na lista de pontos turisticos e na lista de pontos ordenados por pontuacao
     */
     public static boolean CadastrarHotel(String nome, int ordem, String localizacao, String bairro, Cidade cidade, boolean ar, boolean cafe){
         PontoTuristico ponto = new Hotel(nome, ordem, localizacao, bairro, cidade, ar, cafe);
@@ -92,14 +98,15 @@ public class Controller {
     }
     
     /*
-        Retorna o iterator da lista de cidades para a view
+        Retorna o iterator da lista de cidades para a view caso haja
     */
     public static Iterator ListarCidades(){
         return listaCidades.iterator();
     }
     
     /*
-        Recebe uma string com o nome da cidade e Retorna o iterator da lista de cidades com o nome correspondente
+        Recebe uma string com o nome da cidade e Retorna o iterator da lista de 
+        cidades com o nome correspondente
     */
     public static Iterator ProcurarCidade(String nome){
         ArrayList<Cidade> temp = new ArrayList<>();
@@ -111,7 +118,8 @@ public class Controller {
     }
     
     /*
-        Recebe uma cidade, e lista todos os pontos que tem a cidade em comum, e ordenando em ordem alfabbética
+        Recebe uma cidade, e lista todos os pontos que tem a cidade em comum, 
+        e ordenando em ordem alfabbética
     */
     public static Iterator ListarPontos(Cidade c){
         ArrayList<PontoTuristico> listarpontos = new ArrayList<>();
@@ -141,7 +149,8 @@ public class Controller {
     }
     
     /*
-        Retorna o iterator da lista de pontos em ordem de pontuacao, ordenada no batch do operador
+        Retorna o iterator da lista de pontos em ordem de pontuacao, 
+        ordenada no batch do operador
     */
     public static Iterator ListarPontosOrdemPontuacao(){
         return pontosOrdenados.iterator();
@@ -166,7 +175,8 @@ public class Controller {
     }
     
     /*
-        Adiciona uma avaliação a determinado ponto na lista de avaliacoes pendentes no controller do operador
+        Adiciona uma avaliação a determinado ponto na lista de avaliacoes 
+        pendentes no controller do operador
     */
     public static boolean AdicionarAvaliacao(PontoTuristico p, Avaliacao a){
         ControllerOperador.avPendentes.add(new AvPendente(p, a));
@@ -176,7 +186,6 @@ public class Controller {
     public void Salvar() throws IOException{
         FileWriter arq = new FileWriter("Usuarios.txt");
         PrintWriter gravarArq = new PrintWriter(arq);
-        
-       //gravarArq.println(usuarios.get(0).getEmailLogin() + " - " + usuarios.get(0).getHashSenha() + " - " + usuarios.get(0).getNomeCompleto());
+       
     }
 }

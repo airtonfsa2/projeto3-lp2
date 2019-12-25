@@ -11,6 +11,9 @@ import java.security.NoSuchAlgorithmException;
  *
  * @author Usuário
  */
+
+//** Classe Admin para definir quem pode ter privilégios de administrador
+
 public class Admin extends Usuario{
     public Admin(String emailLogin, String Senha, enum sexo, String nomeCompleto) throws NoSuchAlgorithmException {
         super(emailLogin, Senha, sexo, nomeCompleto);
@@ -18,6 +21,7 @@ public class Admin extends Usuario{
 
     public Admin() {
     }
+    
     
     @Override
     public Usuario Promocao() {

@@ -9,10 +9,13 @@ package model;
  *
  * @author Usuário
  */
+
+//** Classe usada para aguardar as avaliações serem aprovadas pelo moderador
+
 public class AvaPendente {
     
-    private PontoTuristico p;
-    private Avaliacao a;
+    private final PontoTuristico p;
+    private final Avaliacao a;
 
     public PontoTuristico getP() {
         return p;

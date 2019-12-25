@@ -9,7 +9,7 @@ import java.util.Objects;
 
 /**
  *
- * @author airto
+ * @author Usuário
  */
 public class Cidade implements Comparable<Cidade> {
     public String nome;

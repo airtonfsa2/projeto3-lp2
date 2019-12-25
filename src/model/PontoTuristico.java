@@ -40,23 +40,19 @@ public abstract class PontoTuristico implements Comparable<PontoTuristico>{
         if (!Objects.equals(this.nome, other.nome)) {
             return false;
         }
- /*       if (!Objects.equals(this.localizacao, other.localizacao)) {
-            return false;
-        }
-        if (!Objects.equals(this.bairro, other.bairro)) {
-            return false;
-        }
-        if (!Objects.equals(this.cidade, other.cidade)) {
-            return false;
-        }*/
+
         return true;
     }
     
+    //** Método para receber avaliação 
+    
     public boolean ReceberAvaliacao(Avaliacao a){
         
+        //**Checa para atestar que a avaliação não existe
         if(avaliacoes.contains(a))
             return false;
         
+        //**Se a avaliação não existir adiciona-a à lista de avaliações
         avaliacoes.add(a);
         return true;
     }

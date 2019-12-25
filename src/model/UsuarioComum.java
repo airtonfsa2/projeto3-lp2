@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author airto
+ * @author Usuário
  */
 public class UsuarioComum extends Usuario {
     private String emailLogin;

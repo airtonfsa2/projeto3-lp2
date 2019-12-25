@@ -13,6 +13,10 @@ import java.util.logging.Logger;
  *
  * @author Usuário
  */
+
+
+//** Classe moderador
+
 public class Moderador extends Usuario{
 
     public Moderador(String emailLogin, String Senha, int sexo, String nomeCompleto) throws NoSuchAlgorithmException {
@@ -21,11 +25,12 @@ public class Moderador extends Usuario{
 
     public Moderador() {
     }
+    
+    //** Método usado para promover usuários em ADM'S
 
     @Override
     public Usuario Promocao() {
-        
-        Admin a = new Admin();
+                Admin a = new Admin(cidadePrincipal, emailLogin, hashSenha, nomeCompleto);
      
         a.cidadePrincipal = cidadePrincipal;
         a.emailLogin = emailLogin;
@@ -35,5 +40,4 @@ public class Moderador extends Usuario{
         
         return a;
     }
-    
 }

@@ -13,6 +13,13 @@ import java.security.NoSuchAlgorithmException;
  *
  * @author Usuário
  */
+
+
+/*
+Classe criada para gerar o hash das senhas, uma forma de criptografar para que
+só quem tenha acesso à chave de descriptografar possa acessar as senhas, caso
+contrário os dados são inúteis
+*/
 public class HashSenha {
     public static String GerarHash(String senha) throws NoSuchAlgorithmException{
         MessageDigest md = MessageDigest.getInstance("MD5");

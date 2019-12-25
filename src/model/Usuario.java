@@ -29,6 +29,11 @@ public abstract class Usuario {
 
     public Usuario() {    
     }
+    
+    /**Método para autenciação de usuários que será herdado por toda classe que
+    herdar dessa classe abstrata "Usuário"
+     * @param email    
+    */
 
     public boolean Autenticar(String email, String senha) throws NoSuchAlgorithmException{
         String hash = HashSenha.GerarHash(senha);

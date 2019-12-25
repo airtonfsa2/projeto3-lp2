@@ -5,14 +5,16 @@
  */
 package model;
 
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 
 /**
  *
  * @author Usuário
  */
+
+//** Classe usada para receber a avaliação e processar
+
+
 public abstract class Avaliacao implements Comparable<Avaliacao>{
     public String titulo;
     public String descricao;
